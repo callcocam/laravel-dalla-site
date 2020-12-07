@@ -1,0 +1,87 @@
+[12-Jun-2020 12:39:18 UTC] PHP Fatal error:  Trait method bootSoftDeletes has not been applied, because there are collisions with other trait methods on SIGA\TableTrait in /home/qkoite4p/packages/src/TableTrait.php on line 18
+[25-Sep-2020 01:32:01 UTC] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php:805
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(805): ReflectionClass->__construct('view')
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(687): Illuminate\Container\Container->build('view')
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(796): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(633): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(781): Illuminate\Container\Container->make('view', Array)
+#5 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(1278): Illuminate\Foundation\Application->make('view in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 807
+[25-Sep-2020 01:32:04 UTC] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php:805
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(805): ReflectionClass->__construct('view')
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(687): Illuminate\Container\Container->build('view')
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(796): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(633): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(781): Illuminate\Container\Container->make('view', Array)
+#5 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php(1278): Illuminate\Foundation\Application->make('view in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 807
+[25-Sep-2020 01:32:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:32:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:32:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:32:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:41:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:43:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:44:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:46:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:46:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671
+[25-Sep-2020 01:46:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) in /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/ducpkb7z/site/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'forge', '', Array)
+#1 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'forge', '', Array)
+#2 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#3 /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/ducpkb7z/site/vendor/laravel/framework/src/Illumina in /home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 671

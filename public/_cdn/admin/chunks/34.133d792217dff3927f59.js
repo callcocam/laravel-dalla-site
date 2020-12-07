@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{"v+MV":function(t,n,e){"use strict";e.r(n);var a=e("KHd+"),s=Object(a.a)({},(function(){var t=this.$createElement,n=this._self._c||t;return n("div",[n("vs-avatar",{attrs:{text:this.$attrs.tenant.name,src:this.$attrs.tenant.cover}})],1)}),[],!1,null,null,null);n.default=s.exports}}]);

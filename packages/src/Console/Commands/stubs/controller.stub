@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Created by Claudio Campos.
+ * User: callcocam@gmail.com, contato@sigasmart.com.br
+ * https://www.sigasmart.com.br
+ */
+namespace {{ namespace }};
+
+use {{ app }}{{ theme }}\{{ model }};
+use {{ app }}\Http\Requests{{ theme }}\{{ model }}Request;
+use {{ app }}\Http\Resources{{ theme }}\{{ model }}\{{ model }}Collection;
+use {{ app }}\Http\Resources{{ theme }}\{{ model }}\{{ model }}Resource;
+use SIGA\Http\AbstractController;
+
+class {{ class }} extends AbstractController
+{
+
+    protected $model = {{ model }}::class;
+
+    protected $withs = [];
+
+    protected $collection = {{ model }}Collection::class;
+    protected $resources = {{ model }}Resource::class;
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  {{ model }}Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store({{ model }}Request $request)
+    {
+
+        return parent::save($request);
+    }
+
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  {{ model }}Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update({{ model }}Request $request, $id)
+    {
+        return parent::save($request, $id);
+    }
+}

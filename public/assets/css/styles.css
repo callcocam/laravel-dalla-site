@@ -1,0 +1,522 @@
+@font-face {
+    src: url(../fontes/BeVietnam-Regular.ttf);
+    font-family: 'BeVietnam-Regular';
+    font-weight: normal;
+}
+@font-face {
+    src: url(../fontes/Antonio-Regular.ttf);
+    font-family: 'Antonio-Regular';
+    font-weight: normal;
+}
+@font-face {
+    src: url(../fontes/kenyan-coffee.ttf);
+    font-family: 'kenyan-cofee';
+    font-weight: normal;
+}
+@font-face {
+    src: url(../fontes/kenyan-coffee-b.ttf);
+    font-family: 'kenyan-cofee-b';
+    font-weight: normal;
+}
+.no-gutters {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.f700{
+    font-weight: 700;
+}
+.f900{
+    font-weight: 900;
+}
+.kenyan{
+    font-family: 'kenyan-cofee', sans-serif;
+}
+.kenyan-b{
+    font-family: 'kenyan-cofee-b', sans-serif;
+}
+.antonio{
+    font-family: 'Antonio-Regular', sans-serif;
+}
+.yellow{
+    color: #B38343;
+}
+.gold{
+    color: #D1B07D;
+}
+
+body{
+    background: #F6F6F6;
+    font-family: 'BeVietnam-Regular', sans-serif;
+}
+.container{
+    max-width: 1200px;
+}
+body{
+    color: #fff;
+}
+.top{
+    background: #092729;
+}
+.top .logo{
+    padding: 15px;
+}
+.top .logo img{
+    max-width: 130px;
+}
+.top .navbar{
+    margin-top: 15px;
+}
+.top .navbar .nav-item{
+    padding: 0 30px;
+    font-family: 'Antonio-Regular', sans-serif;
+}
+.top .navbar .nav-item .active{
+    border-bottom: 2px solid #B38343;
+}
+.top .navbar  a{
+    color: #fff !important;
+}
+.main{
+    background-image: url("../../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.sobre_home{
+    padding: 100px 0 25px;
+}
+.historia_home h1{
+    border-bottom: 1px solid #B38343;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.historia_home_content{
+    text-align: justify;
+    padding: 40px 30px 40px 15px;
+}
+.produtos_home{
+    padding: 100px 0 25px;
+}
+.produtos_home h1{
+    border-bottom: 1px solid #B38343;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    text-align: right;
+}
+.produtos_home .producao{
+    margin-top: 150px;
+}
+.produtos_home img{
+    max-width: 650px;
+}
+.produtos_home_content{
+    text-align: justify;
+    padding: 40px 15px 20px 40px;
+}
+.premiacoes_home{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.carousel-3d-container .next[data-v-d8f7eea2], .prev[data-v-d8f7eea2] {
+    color: #B38343 !important;
+}
+.footer{
+    background: #092729;
+    padding: 40px 0;
+}
+.footer .nav-item{
+    padding: 0 30px;
+
+}
+.logo_footer img{
+    max-width: 100px;
+    padding: 10px 0;
+}
+.endereco_footer{
+    margin: 10px 0 10px
+}
+.fone_footer{
+    margin: 10px 0 10px
+}
+.copy_footer{
+    margin-top: 50px;
+    padding-right: 50px;
+}
+.footer_nav ul{
+    display: block; float: left;
+}
+.footer_nav ul li{
+    display: inline-block; float: left;
+}
+.footer_nav ul li a{
+    color: #fff !important;
+}
+.social_footer{
+    float: left;
+    margin: 10px 0;
+}
+.social_footer_icon{
+    padding: 10px;
+}
+.copy_footer p{
+    text-align: right;
+    margin: 40px 0 10px;
+}
+/* Social Icons */
+#social_side_links {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    padding: 0;
+    list-style: none;
+    z-index: 99;
+
+}
+
+#social_side_links li a {
+    display: block;
+}
+
+#social_side_links li a img {
+    display: block;
+    max-width:40px;
+    padding: 5px 10px;
+    -webkit-transition:  background .2s ease-in-out;
+    -moz-transition:  background .2s ease-in-out;
+    -o-transition:  background .2s ease-in-out;
+    transition:  background .2s ease-in-out;
+}
+
+#social_side_links li a:hover img {
+    background: rgba(0, 0, 0, .2);
+}
+/*##### CAMPANHAS #######*/
+.campanhas{
+    background: #092729;
+}
+.campanhas_topo{
+     padding: 50px 0;
+ }
+.campanhas_topo h1{
+    text-align: right;
+}
+.campanhas_topo_desc{
+    border-left: 2px solid #B38343;
+    padding: 30px 20px;
+}
+.campanhas-gallery a{
+
+}
+.gallery-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    overflow: hidden; }
+.gallery-img .desc {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1; }
+.gallery-img .desc h2 {
+    color: #B38343;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+
+.gallery-img:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba(9, 39, 41, 0.7);
+    z-index: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+.gallery-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    z-index: -1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+.gallery-img:hover:after, .gallery-img:focus:after {
+    opacity: 0; }
+.gallery-img:hover .desc, .gallery-img:focus .desc {
+    z-index: 1; }
+.gallery-img:hover .desc h2, .gallery-img:focus .desc h2 {
+    font-size: 40px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);}
+.gallery-img:hover img, .gallery-img:focus img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 1;
+    -webkit-box-shadow: 0px 0px 46px 1px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 0px 46px 1px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 0px 46px 1px rgba(0, 0, 0, 0.28); }
+
+/*###### CAMPANHA ########*/
+.campanha_conteudo{
+    padding: 50px 0 80px;
+}
+
+.campanha_titulo_sublinhado{
+    border-bottom: 1px solid #B38343;
+    padding: 0 20px;
+    float: left;
+    display: block;
+}
+.campanha_titulo{
+    font-size: 4em;
+    width: 100%;
+    float: left;
+    display: block;
+    padding-left: 20px;
+
+}
+
+.campanha_conteudo_direita{
+    padding: 0 40px;
+    text-align: justify;
+}
+.campanha_titulo_pecas{
+    border-bottom: 1px solid #B38343;
+    padding: 5px 15px;
+    width: auto;
+    float: left;
+}
+.campanha_slide{
+    margin: 30px 0 50px;
+}
+/*##### EVENTOS ######*/
+
+.eventos_conteudo{
+    padding: 50px 0;
+}
+.eventos_titulo{
+    font-size: 4em;
+    width: 100%;
+    float: left;
+    display: block;
+    max-width: 400px;
+    padding-bottom: 40px;
+}
+.eventos_lista{
+    padding-bottom: 40px;
+}
+/*##### EVENTO ######*/
+.evento_titulo_sublinhado{
+    border-bottom: 1px solid #B38343;
+    padding: 0 150px 0 20px;
+    float: left;
+    display: block;
+}
+
+/*#### REVENDEDOR ####*/
+
+.revendedor_conteudo{
+    padding: 50px 0;
+}
+
+.revendedor_titulo{
+    font-size: 4em;
+    width: 100%;
+    float: left;
+    display: block;
+    max-width: 400px;
+    padding: 20px;
+}
+.revendedor_form{
+    padding: 40px;
+}
+
+.revendedor_form input{
+    background: rgba(201, 157, 103, 0.4);
+    border:none;
+}
+.revendedor_form textarea{
+    background: rgba(201,158,103, 0.4);
+    border:none;'
+}
+.form-control::-webkit-input-placeholder {
+    color: #bec6cc;
+}
+.form-control:-moz-placeholder {
+    color: #bec6cc;
+}
+.form-control::-moz-placeholder {
+    color: #bec6cc;
+}
+.form-control::placeholder {
+    color: #bec6cc;
+}
+.form-control:-ms-input-placeholder {
+    color: #bec6cc;
+}
+
+.revendedor_form .btn-form{
+    background: #B38343;
+    color: #fff;
+}
+.revendedor_icon{
+    padding: 0 50px;
+}
+.btn_revendedor{
+    background: #B38343;
+    font-size: 17px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+
+/*########PRODUTOS##########*/
+.produtos{
+
+}
+.produtos_conteudo{
+    padding: 60px 0;
+}
+.produtos_titulo_sublinhado{
+    border-bottom: 1px solid #B38343;
+    padding: 0 20px;
+    float: left;
+    display: block;
+}
+.produtos_imagem{
+    padding: 30px 0;
+}
+.produtos_estilos_slide{
+    margin-top: 30px;
+}
+.produtos_estilos_card{
+    background: rgb(229,224,212);
+    background: linear-gradient(0deg,
+    rgb(220, 223, 189) 0%,
+    rgba(239,237,231,1) 10%,
+    rgba(239,237,231,1) 89%,
+    rgba(229,224,212,1) 100%);
+    color: #092729;
+    min-height: 330px;
+    padding: 10px;
+}
+.produtos_estilos_card .card-header{
+    border-bottom: 1px solid #B38343;
+    margin: 0 10px;
+    background: transparent;
+}
+.produtos_estilos_card .card-header .nome{
+    font-size: 1.6em;
+    line-height: 1em;
+    text-align: right;
+}
+.produtos_estilos_card .card-header .infos{
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: left;
+}
+.produtos_estilos_card p{
+    font-size: 12px;
+    text-align: justify;
+}
+
+@media all and (max-width: 1100px) {
+    .footer .nav-item{
+        padding: 0 20px;
+    }
+    .footer_nav ul{
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 770px) {
+    .navbar-collapse{
+        margin-top: 15px;
+    }
+    .sobre_home{
+        padding: 50px 0 25px;
+    }
+    .sobre_home h1{
+        text-align: center;
+    }
+    .produtos_home{
+        padding: 30px 0 25px;
+    }
+    .produtos_home h1{
+        text-align: center;
+    }
+    .produtos_home .producao{
+        margin-top: 30px;
+    }
+    .produtos_home_content{
+        text-align: justify;
+        padding: 30px 20px;
+    }
+    .premiacoes_home{
+        padding: 30px 0;
+    }
+    .footer{
+        text-align: center;
+        padding: 20px 0;
+    }
+    .footer_nav ul{
+        text-align: center;
+    }
+    .copy_footer{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .copy_footer p{
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .campanhas_topo{
+       text-align: center;
+    }
+    .campanhas_topo_desc{
+        border-left: none;
+    }
+    .revendedor_conteudo{
+        padding: 15px;
+    }
+    .revendedor_form{
+        padding: 10px;
+    }
+    .revendedor_icon{
+        padding: 15px;
+    }
+    .social_footer{
+        width: 100%;
+        text-align: center;
+    }
+    .produtos_conteudo{
+        padding: 20px 10px;
+    }
+    .produtos_titulo_sublinhado{
+        text-align: center;
+        display: block;
+        margin: 10px auto;
+    }
+
+}
+@media all and (max-width: 580px) {
+    .campanha_box_titulo{
+    }
+}

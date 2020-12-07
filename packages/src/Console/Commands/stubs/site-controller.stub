@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Created by Claudio Campos.
+ * User: callcocam@gmail.com, contato@sigasmart.com.br
+ * https://www.sigasmart.com.br
+ */
+namespace {{ namespace }};
+
+use {{ app }}{{ theme }}\{{ model }};
+use App\Http\Controllers\AbstractController;
+
+class {{ class }} extends AbstractController
+{
+
+    protected $model = {{ model }}::class;
+    protected $template = '{{ template }}';
+    protected $theme = '{{ app_theme }}';
+
+}

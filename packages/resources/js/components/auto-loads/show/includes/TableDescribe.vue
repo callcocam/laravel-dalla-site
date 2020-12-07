@@ -1,0 +1,251 @@
+<template>
+  <div id="data-list-list-view" class="data-list-container">
+    <data-view-sidebar
+      :isSidebarActive="addNewDataSidebar"
+      @closeSidebar="toggleDataSidebar"
+      :data="sidebarData"
+    />
+
+    <vs-table ref="table" v-model="selected" :data="describes">
+      <div slot="header" class="flex flex-wrap-reverse items-center flex-grow justify-between">
+        <div class="flex flex-wrap-reverse items-center data-list-btn-container">
+          <!-- ADD NEW -->
+          <div
+            class="btn-add-new p-3 mb-4 mt-4 mr-4 rounded-lg cursor-pointer flex items-center justify-center text-lg font-medium text-base text-primary border border-solid border-primary"
+            @click="addNewData"
+          >
+            <feather-icon icon="PlusIcon" svgClasses="h-4 w-4" />
+            <span class="ml-2 text-base text-primary">Add New</span>
+          </div>
+        </div>
+      </div>
+
+      <template slot="thead">
+        <vs-th>Field</vs-th>
+        <vs-th>Type</vs-th>
+        <vs-th>Null</vs-th>
+        <vs-th>Key</vs-th>
+        <vs-th>Default</vs-th>
+        <vs-th>Extra</vs-th>
+        <vs-th>Action</vs-th>
+      </template>
+
+      <template slot-scope="{data}">
+        <tbody>
+          <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
+            <vs-td>
+              <p class="product-name font-medium truncate">{{ tr.Field }}</p>
+            </vs-td>
+
+            <vs-td>
+              <p class="product-category">{{ tr.Type }}</p>
+            </vs-td>
+
+            <vs-td>
+              <p>{{ tr.Null }}</p>
+            </vs-td>
+
+            <vs-td>
+              <p>{{ tr.Key }}</p>
+            </vs-td>
+
+            <vs-td>
+              <p>{{ tr.Default }}</p>
+            </vs-td>
+
+            <vs-td>
+              <p>{{ tr.Extra }}</p>
+            </vs-td>
+
+            <vs-td class="whitespace-no-wrap">
+              <feather-icon
+                icon="EditIcon"
+                svgClasses="w-5 h-5 hover:text-primary stroke-current"
+                @click.stop="editData(tr)"
+              />
+              <feather-icon
+                icon="TrashIcon"
+                svgClasses="w-5 h-5 hover:text-danger stroke-current"
+                class="ml-2"
+                @click.stop="deleteData(tr)"
+              />
+            </vs-td>
+          </vs-tr>
+        </tbody>
+      </template>
+    </vs-table>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    describes: {
+      type: [Object, Array, String],
+      required: true
+    }
+  },
+  data() {
+    return {
+      selected: [],
+      // products: [],
+      itemsPerPage: 4,
+      isMounted: false,
+
+      // Data Sidebar
+      addNewDataSidebar: false,
+      sidebarData: {}
+    };
+  },
+  computed: {
+    currentPage() {
+      if (this.isMounted) {
+        return this.$refs.table.currentx;
+      }
+      return 0;
+    }
+  },
+  methods: {
+    addNewData() {
+      this.sidebarData = {};
+      this.toggleDataSidebar(true);
+    },
+    deleteData(id) {
+      this.$store.dispatch("dataList/removeItem", id).catch(err => {
+        console.error(err);
+      });
+    },
+    editData(data) {
+      // this.sidebarData = JSON.parse(JSON.stringify(this.blankData))
+      this.sidebarData = data;
+      this.toggleDataSidebar(true);
+    },
+    toggleDataSidebar(val = false) {
+      this.addNewDataSidebar = val;
+    }
+  },
+  created() {},
+  mounted() {
+    this.isMounted = true;
+  }
+};
+</script>
+
+<style lang="scss">
+#data-list-list-view {
+  .vs-con-table {
+    /*
+      Below media-queries is fix for responsiveness of action buttons
+      Note: If you change action buttons or layout of this page, Please remove below style
+    */
+    @media (max-width: 689px) {
+      .vs-table--search {
+        margin-left: 0;
+        max-width: unset;
+        width: 100%;
+
+        .vs-table--search-input {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 461px) {
+      .items-per-page-handler {
+        display: none;
+      }
+    }
+
+    @media (max-width: 341px) {
+      .data-list-btn-container {
+        width: 100%;
+
+        .dd-actions,
+        .btn-add-new {
+          width: 100%;
+          margin-right: 0 !important;
+        }
+      }
+    }
+
+    .product-name {
+      max-width: 23rem;
+    }
+
+    .vs-table--header {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      > span {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      .vs-table--search {
+        padding-top: 0;
+
+        .vs-table--search-input {
+          padding: 0.9rem 2.5rem;
+          font-size: 1rem;
+
+          & + i {
+            left: 1rem;
+          }
+
+          &:focus + i {
+            left: 1rem;
+          }
+        }
+      }
+    }
+
+    .vs-table {
+      border-collapse: separate;
+      border-spacing: 0 1.3rem;
+      padding: 0 1rem;
+
+      tr {
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+        td {
+          padding: 20px;
+          &:first-child {
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+          }
+          &:last-child {
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+          }
+        }
+        td.td-check {
+          padding: 20px !important;
+        }
+      }
+    }
+
+    .vs-table--thead {
+      th {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .vs-table-text {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+      th.td-check {
+        padding: 0 15px !important;
+      }
+      tr {
+        background: none;
+        box-shadow: none;
+      }
+    }
+
+    .vs-table--pagination {
+      justify-content: center;
+    }
+  }
+}
+</style>

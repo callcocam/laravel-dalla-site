@@ -1,0 +1,63 @@
+<?php
+/**
+ * Created by Claudio Campos.
+ * User: callcocam@gmail.com, contato@sigasmart.com.br
+ * https://www.sigasmart.com.br
+ */
+use Illuminate\Database\Seeder;
+use SIGA\Make;
+
+class {{ class }} extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+
+        $Event = $this->make(
+            [
+                "name" => "{{ name }}",
+                "path" => "{{ path }}",
+                "app_table" => "{{ table }}",
+                "app_controller" => "{{ controller }}",
+                "app_model" => "{{ model }}",
+                "app_route" => "{{ route }}",
+            ]
+        );
+
+        $this->menu_attribute($Event->menu()->create([
+            "name" => "{{ name }}",
+            "ordering" => "1",
+        ]), [
+            "url" => "/admin/{{ path }}",
+            "icon" => "CircleIcon",
+            "i18n" => "{{ model }}s"
+        ]);
+    }
+
+
+    protected function menu_attribute($menu, $data)
+    {
+        $menu->menu_attribute()->create($data);
+    }
+    protected function make($data = [])
+    {
+        return factory(Make::class)->create(
+            array_merge([
+                "name" => null,
+                "path" => null,
+                "app_path" => "App",
+                "app_theme" => null,
+                "app_root" => "app",
+                "app_table" => null,
+                "app_controller" => null,
+                "app_model" => null,
+                "app_route" => null,
+                "app_method" => "crud",
+            ], $data)
+        );
+    }
+}

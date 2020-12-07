@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Created by Claudio Campos.
+ * User: callcocam@gmail.com, contato@sigasmart.com.br
+ * https://www.sigasmart.com.br
+ */
+
+namespace {{ namespace }};
+
+use SIGA\Http\Resources\AbstractResource;
+use SIGA\Http\Resources\Collumns\Fields\ID;
+use SIGA\Http\Resources\Collumns\Fields\STATUS;
+use SIGA\Http\Resources\Collumns\Fields\ACTION;
+
+class {{ class }} extends AbstractResource
+{
+
+
+    public function fields($resource)
+    {
+
+        return [
+            ID::make('id')->hidden_index(),
+            // COVER::make('cover')->route('users, products etc...'),
+            //
+            STATUS::make('status'),
+            ACTION::make('actions')->hidden_edit()
+        ];
+    }
+}

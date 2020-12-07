@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Created by Claudio Campos.
+ * User: callcocam@gmail.com, contato@sigasmart.com.br
+ * https://www.sigasmart.com.br
+ */
+
+namespace {{ namespace }};
+
+use SIGA\Http\Resources\AbstractCollection;
+
+use {{ app }}{{ theme }}\{{ model }};
+
+class {{ class }} extends AbstractCollection
+{
+    public $collects = {{ model }}Resource::class;
+
+    public $model = {{ model }}::class;
+
+}
