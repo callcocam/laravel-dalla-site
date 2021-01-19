@@ -17,13 +17,30 @@ class ProductController extends AbstractController
 
    protected $template = 'products';
    protected $theme = 'dalla';
+    protected $colunm = 'ordering';
+    protected $direction = 'ASC';
+
 
    protected $model = Product::class;
 
-   public function carrousel3d()
+   public function carrousel3dProduct($id)
    {
-       $products = app(ProductStyle::class)->query()->where('status', self::$PUBLISHED_STATUS)->get();
+//       dd($id);
+       $data = [];
+       $productGallery = Product::find($id);
+//       dd($productGallery);
+       if ($productGallery) {
 
-       return response()->json($products);
+           $data = $productGallery->append('gallery');
+           return response()->json($data->gallery);
+       }
+       return response()->json($data);
    }
+
+    public function carrousel3d()
+    {
+        $products = app(ProductStyle::class)->query()->where('status', self::$PUBLISHED_STATUS)->get();
+
+        return response()->json($products);
+    }
 }

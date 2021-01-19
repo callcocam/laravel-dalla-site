@@ -10,6 +10,7 @@ namespace App\Http\Resources\Dalla\Product;
 
 use SIGA\Http\Resources\AbstractResource;
 use SIGA\Http\Resources\Collumns\Fields\ID;
+use SIGA\Http\Resources\Collumns\Fields\MULTIPLEUPLOAD;
 use SIGA\Http\Resources\Collumns\Fields\STATUS;
 use SIGA\Http\Resources\Collumns\Fields\ACTION;
 use SIGA\Http\Resources\Collumns\Fields\COVER;
@@ -26,7 +27,7 @@ class ProductResource extends AbstractResource
 
         return [
             ID::make('id')->hidden_index(),
-            COVER::make('cover')->route('products'),
+            MULTIPLEUPLOAD::make('gallery')->route('products'),
             TEXT::make('name'),
             TEXT::make('subtitle'),
             TEXTAREA::make('description')->hidden_index(),

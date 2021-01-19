@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $tenant->name }}</title>
+    <title>Dalla Cervejaria</title>
+    <meta name="description" content="Ela mudou. Descubra uma nova sensação.  Experimente Dalla, a cerveja dos mestres! "/>
+    <meta name="keywords" content="Dalla, Cervejaria, Cerveja Artesanal, Santa Catarina"/>
+    <meta name="robots" content="index,follow"/>
+    <meta property="og:title" content="Dalla Cervejaria" />
+    <meta property="og:description" content="Ela mudou. Descubra uma nova sensação.  Experimente Dalla, a cerveja dos mestres!" />
+    <meta property="og:image" content="https://www.dallacervejaria.com.br/img/banner.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:url" content="https://www.dallacervejaria.com.br/" />
+    <meta property="og:site_name" content="Dalla Cervejaria" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="article:author" content="https://www.facebook.com/cervejariadalla" />
+    <meta property="article:publisher" content="https://www.facebook.com/cervejariadalla" />
     <!-- Fonts -->
+
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
    <!--Favicon-->
-   <link rel="icon" href="{{ asset('/favicon.png') }}" type="image/x-icon">
+   <link rel="icon" href="{{ asset('/img/favicon-dalla.png') }}" type="image/x-icon">
    <!-- Styles -->
-    <link href="{{ asset('_cdn/dalla/css/app-07.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('_cdn/dalla/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -49,21 +63,21 @@
                 <div class="row">
                     <div class="col col-md-4 gold small">
                         <div class="logo_footer">
-                            <img src="{{ asset('img/logo.fw.png') }}">
+                            <img src="{{ asset('img/logo-footer.fw.png') }}">
                         </div>
                         <div class="endereco_footer">
                             <p> {{ $tenant->address->street }} {{ $tenant->address->district }} {{ $tenant->address->city }} - {{ $tenant->address->state }} | {{ $tenant->address->zip }}</p>
                         </div>
-                        <div class="fone_footer">
+                        <div class="fone_footer font-weight-bold" style="font-size: 17px">
                             {{ $tenant->phone }}
                         </div>
                         <div class="email_footer">
                             {{ $tenant->email }}
                         </div>
                         <div class="social_footer">
-                            <a class="social_footer_icon" href="https://www.youtube.com/channel/UCbmGYHzXjufLBZfyag0uuuw"><img src="{{ asset('img/icon/youtube.fw.png') }}"> </a>
-                            <a class="social_footer_icon" href="https://www.facebook.com/cervejariadalla"><img src="{{ asset('img/icon/facebook.fw.png') }}"> </a>
-                            <a class="social_footer_icon" href="https://www.instagram.com/dallacervejaria/"><img src="{{ asset('img/icon/instagram.fw.png') }}"> </a>
+                            <a target="_blank" class="social_footer_icon" href="https://www.youtube.com/channel/UCbmGYHzXjufLBZfyag0uuuw"><img src="{{ asset('img/icon/youtube.fw.png') }}"> </a>
+                            <a target="_blank" class="social_footer_icon" href="https://www.facebook.com/cervejariadalla"><img src="{{ asset('img/icon/facebook.fw.png') }}"> </a>
+                            <a target="_blank" class="social_footer_icon" href="https://www.instagram.com/dallacervejaria/"><img src="{{ asset('img/icon/instagram.fw.png') }}"> </a>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -91,6 +105,6 @@
         </ul>
     </div>
  <!-- Scripts -->
-<script src="{{ asset('_cdn/dalla/js/app-07.js') }}" defer></script>
+<script src="{{ asset('_cdn/js/app3.js') }}" defer></script>
 </body>
 </html>

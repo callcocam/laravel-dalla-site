@@ -10,6 +10,7 @@
       :controls-height="30"
       :clickable="true"
       :width="300"
+      :height="350"
       :display="3"
       :perspective="0"
       :border="0"

@@ -9,7 +9,7 @@
                 <div class="p-2 text-justify">
                     <p> {!!  $content->description !!}</p>
                 </div>
-                <img class="img-fluid p-5" src="{{ asset( $content->cover ) }}">
+                <img class="img-fluid py-5" src="{{ asset( $content->cover ) }}">
 
             </div>
         </div>

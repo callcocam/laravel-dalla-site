@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reseller-Notification</title>
+    <title>DALLA CERVEJARIA-REPRESENTANTES</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Styles -->
@@ -23,14 +23,16 @@
 
         <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
             <div class="grid grid-cols-1 md:grid-cols-2">
-                {{ $data['name'] }}
+                Nome: {{ $data['name'] }}<br>
+                Telefone: {{ $data['phone'] }}<br>
+                Assunto: {{ $data['subject'] }}
 {{--                {{ $user['name'] }}--}}
             </div>
         </div>
 
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
             <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                Build v{{ Illuminate\Foundation\Application::VERSION }}
+                {!! $data['description'] !!}
             </div>
         </div>
     </div>

@@ -182,7 +182,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/home/ducpkb7z/site/storage/framework/cache/data',
+        'path' => '/var/www/dionata/laravel-dalla-site/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -270,8 +270,8 @@
         'host' => 'localhost',
         'port' => '3306',
         'database' => 'dalla_cervejaria',
-        'username' => 'dalla_root',
-        'password' => '7Tnp%bNM-yvmN17z',
+        'username' => 'callcocam',
+        'password' => 'root',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -290,8 +290,8 @@
         'host' => 'localhost',
         'port' => '3306',
         'database' => 'dalla_cervejaria',
-        'username' => 'dalla_root',
-        'password' => '7Tnp%bNM-yvmN17z',
+        'username' => 'callcocam',
+        'password' => 'root',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -305,8 +305,8 @@
         'host' => 'localhost',
         'port' => '3306',
         'database' => 'dalla_cervejaria',
-        'username' => 'dalla_root',
-        'password' => '7Tnp%bNM-yvmN17z',
+        'username' => 'callcocam',
+        'password' => 'root',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -348,12 +348,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/home/ducpkb7z/site/storage/app',
+        'root' => '/var/www/dionata/laravel-dalla-site/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/home/ducpkb7z/site/storage/app/public',
+        'root' => '/var/www/dionata/laravel-dalla-site/storage/app/public',
         'url' => '//dallacervejaria.com.br/storage',
         'visibility' => 'public',
       ),
@@ -370,7 +370,7 @@
     ),
     'links' => 
     array (
-      '/home/ducpkb7z/site/public/storage' => '/home/ducpkb7z/site/storage/app/public',
+      '/var/www/dionata/laravel-dalla-site/public/storage' => '/var/www/dionata/laravel-dalla-site/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -404,13 +404,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/home/ducpkb7z/site/storage/logs/laravel.log',
+        'path' => '/var/www/dionata/laravel-dalla-site/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/home/ducpkb7z/site/storage/logs/laravel.log',
+        'path' => '/var/www/dionata/laravel-dalla-site/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -460,7 +460,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/home/ducpkb7z/site/storage/logs/laravel.log',
+        'path' => '/var/www/dionata/laravel-dalla-site/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -472,11 +472,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.sendgrid.net',
-        'port' => '580',
+        'host' => 'mail.sistema.dallacervejaria.com.br',
+        'port' => '587',
         'encryption' => 'tls',
-        'username' => 'VWhV8QidTCSfynYiTxtOyg',
-        'password' => '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',
+        'username' => 'envio@sistema.dallacervejaria.com.br',
+        'password' => 'dalla@2021',
         'timeout' => NULL,
       ),
       'ses' => 
@@ -508,15 +508,15 @@
     ),
     'from' => 
     array (
-      'address' => 'sistema@dallacervejaria.com.br',
-      'name' => 'Dalla',
+      'address' => 'envio@sistema.dallacervejaria.com.br',
+      'name' => 'Dalla Cervejaria',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/home/ducpkb7z/site/resources/views/vendor/mail',
+        0 => '/var/www/dionata/laravel-dalla-site/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -608,7 +608,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/ducpkb7z/site/storage/framework/sessions',
+    'files' => '/var/www/dionata/laravel-dalla-site/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -635,9 +635,9 @@
   array (
     'paths' => 
     array (
-      0 => '/home/ducpkb7z/site/resources/views',
+      0 => '/var/www/dionata/laravel-dalla-site/resources/views',
     ),
-    'compiled' => '/home/ducpkb7z/site/storage/framework/views',
+    'compiled' => '/var/www/dionata/laravel-dalla-site/storage/framework/views',
   ),
   'debugbar' => 
   array (
@@ -650,7 +650,7 @@
     array (
       'enabled' => true,
       'driver' => 'file',
-      'path' => '/home/ducpkb7z/site/storage/debugbar',
+      'path' => '/var/www/dionata/laravel-dalla-site/storage/debugbar',
       'connection' => NULL,
       'provider' => '',
     ),
@@ -742,7 +742,7 @@
     'include_helpers' => false,
     'helper_files' => 
     array (
-      0 => '/home/ducpkb7z/site/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
+      0 => '/var/www/dionata/laravel-dalla-site/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
     ),
     'model_locations' => 
     array (

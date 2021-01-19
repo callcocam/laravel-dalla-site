@@ -34,7 +34,9 @@ class ResellerMail extends Mailable
      */
     public function build()
     {
-        return $this->from('example@example.com')->view('emails.reseller')
+        return $this->view('emails.reseller')
+            ->subject($this->data['subject'])
+            ->from('envio@sistema.dallacervejaria.com.br')
             ->with('data',$this->data)
             ->with('user',$this->user);
     }

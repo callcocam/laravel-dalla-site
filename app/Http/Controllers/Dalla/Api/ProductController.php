@@ -11,6 +11,7 @@ use App\Dalla\Product;
 use App\Http\Requests\Dalla\ProductRequest;
 use App\Http\Resources\Dalla\Product\ProductCollection;
 use App\Http\Resources\Dalla\Product\ProductResource;
+use Illuminate\Http\Request;
 use SIGA\Http\AbstractController;
 
 class ProductController extends AbstractController
@@ -22,6 +23,9 @@ class ProductController extends AbstractController
 
     protected $collection = ProductCollection::class;
     protected $resources = ProductResource::class;
+
+    protected $colunm = 'ordering';
+    protected $direction = 'ASC';
 
     /**
      * Store a newly created resource in storage.

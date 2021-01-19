@@ -22,11 +22,11 @@ class ResellerController extends AbstractController
    protected $model = Reseller::class;
 
    public function store(ResellerRequest $resellerRequest){
-
+     
        //AJUDA
        //https://laravel.com/docs/8.x/mail
        $reseller = parent::save($resellerRequest);
-       Mail::to("site@dallacervejaria.com.br")
+       Mail::to("elton.fedalto@dallacervejaria.com.br")
            //->cc($moreUsers)
            ///->bcc($evenMoreUsers)
            ->send(new ResellerMail($resellerRequest->input()));

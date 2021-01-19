@@ -20,7 +20,8 @@ class AbstractController extends Controller
     protected $event;
     protected $request;
     protected $perPage = 12;
-
+    protected $colunm = 'created_at';
+    protected $direction = 'desc';
     protected $template = 'home';
     protected $theme = '';
 
@@ -36,6 +37,7 @@ class AbstractController extends Controller
             $this->results['rows'] = app($this->model)
                 ->filter($request)
                 ->lang()
+                ->orderBy($this->colunm, $this->direction)
                 ->paginate(request()->query('page', $this->perPage));
         }
         if (empty($this->theme))

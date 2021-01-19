@@ -13,9 +13,11 @@
                 </div>
                 <div class="col-md-7">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 mt-4">
                         @if (session('success'))
-                        {{ Session::get('success') }}
+                              <div class="alert alert-success">
+                                  Sua menssagem foi recebida com sucesso:), logo entraremos em contato!
+                              </div>
                         @endif
                         <form class="revendedor_form" action="{{ route('dalla.resellers.store') }}" method="POST">
                             @csrf
@@ -76,7 +78,7 @@
                     <div class="row">
                         <div class="col text-center mt-4">
 {{--                            <a class="btn btn_revendedor font-weight-bold"><img class="mr-2" src="{{ asset('img/icon/whatsapp.fw.png') }}"> {{ trans('tenant.phone') }}</a>--}}
-                            <a href="https://api.whatsapp.com/send?phone=5549999985146&text=Ol%C3%A1%2C%20quero%20ser%20um%20Revendedor%20Dalla!" target="_blank" class="btn btn_revendedor font-weight-bold text-white"><img class="mr-2" src="{{ asset('img/icon/whatsapp.fw.png') }}"> (49) 9 9998 5146</a>
+                            <a href="https://api.whatsapp.com/send?phone=5549920200445&text=Ol%C3%A1%2C%20quero%20ser%20um%20Revendedor%20Dalla!" target="_blank" class="btn btn_revendedor font-weight-bold text-white"><img class="mr-2" src="{{ asset('img/icon/whatsapp.fw.png') }}"> (49) 92020-0445</a>
                         </div>
                     </div>
 

@@ -45,5 +45,6 @@ Route::prefix('v1')->group(function ($router) {
         $router->get('carrousel-3d/awards', 'HomeController@carrousel3d')->name('dalla.home.carrousel3d');
         $router->get('carrousel-3d/products', 'ProductController@carrousel3d')->name('dalla.home.carrousel3d.products');
         $router->get('carrousel-3d/{slus}/campaings', 'CampaignController@carrousel3d')->name('dalla.home.carrousel3d.campaings');
+        $router->get('carrousel-3d/{id}/products/gallery', 'ProductController@carrousel3dProduct')->name('dalla.home.carrousel3d.products-gallery');
     });
 });

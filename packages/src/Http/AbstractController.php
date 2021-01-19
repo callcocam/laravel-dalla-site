@@ -23,6 +23,9 @@ class AbstractController extends Controller
 
     protected $model;
 
+    protected $colunm = 'created_at';
+    protected $direction = 'desc';
+
     protected $event;
 
     protected $resources;
@@ -64,6 +67,7 @@ class AbstractController extends Controller
             $model = $this->getModel()
                 ->with($this->loadWiths)
                 ->latest()
+                ->orderBy($this->colunm, $this->direction)
                 ->filter($request)
                 ->paginate(request()->query('per_page', $this->perPage));
         }

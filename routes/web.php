@@ -17,14 +17,29 @@ use SIGA\Menu;
 
 Auth::routes();
 
-include "dev.php";
+Route::group(['middleware' => ['dezoitomais']],
+    function (){
 
-//include "rpps.php";
 
-Route::get('/language/{lang}', 'HomeController@language')->name('language');
-\Route::view("tenant/404", get_theme("errors.tenant-404"))->middleware(['not-tenant'])->name('tenant.404');
-\Route::view("tenant/401", get_theme("errors.denies-401"))->name('access.denies.401');
+        Route::get('/language/{lang}', 'HomeController@language')->name('language');
+        \Route::view("tenant/404", get_theme("errors.tenant-404"))->middleware(['not-tenant'])->name('tenant.404');
+        \Route::view("tenant/401", get_theme("errors.denies-401"))->name('access.denies.401');
 
-LoadHomeRoute::make();
+        LoadHomeRoute::make();
 
-include "dalla.php";
+        include "dalla.php";
+    }
+);
+
+//Route::get( '/', function (){
+//    return view('construcao');
+//});
+
+Route::get( '/confirme', function (){
+    return view('dezoitomais');
+})->name('dezoitomais');
+Route::get( '/setcookie', function (){
+    setcookie("dezoitomaisdalla", 'dezoitomaisdalla', time()+604800);  /* expira em 1 hora */
+return  redirect(url('/'));
+
+})->name('dezoitomais.setcookie');
